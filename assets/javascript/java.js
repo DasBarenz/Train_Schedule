@@ -5,8 +5,8 @@ var config = {
     projectId: "firstproject-107b4",
     storageBucket: "firstproject-107b4.appspot.com",
     messagingSenderId: "1018512885254"
-};
-firebase.initializeApp(config);
+  };
+  firebase.initializeApp(config);
 
 var database = firebase.database();
 
@@ -17,8 +17,8 @@ $("#trainSubmit").on("click", function (event) {
     // Grabs user input
     var trainName = $("#trainInput").val().trim();
     var destination = $("#destinationInput").val().trim();
-    var timeStart = moment($("#timeInput").val().trim(), "kk:mm");
-    // var timeStart = moment($("#timeInput").val().trim(), "kk:mm").format("X");
+    // var timeStart = moment($("#timeInput").val().trim(), "kk:mm"); BROKE M'SHTUFF
+    var timeStart = moment($("#timeInput").val().trim(), "kk:mm").format("X");
     var frequency = $("#frequencyInput").val().trim();
 
     // Creates local "temporary" object for holding employee data
@@ -33,10 +33,10 @@ $("#trainSubmit").on("click", function (event) {
     database.ref().push(newTrain);
 
     // Logs everything to console
-    console.log(newTrain.name);
-    console.log(newTrain.where);
-    console.log(newTrain.start);
-    console.log(newTrain.often);
+    console.log("name " + newTrain.name);
+    console.log("where " + newTrain.where);
+    console.log("start " + newTrain.start);
+    console.log("freq " + newTrain.often);
 
     // alert("Employee successfully added");
     //add an added notification on the screen
@@ -59,10 +59,10 @@ database.ref().on("child_added", function (childSnapshot) {
     var theFrequency = childSnapshot.val().often;
 
     // Employee Info
-    console.log(theName);
-    console.log(theWhere);
-    console.log(theStart);
-    console.log(theFrequency);
+    console.log("DB name " + theName);
+    console.log("DB where " + theWhere);
+    console.log("DB start " + theStart);
+    console.log("DB freq " + theFrequency);
 
     // Prettify the employee start
     var startPretty = moment.unix(theStart).format("kk:mm");
@@ -70,11 +70,11 @@ database.ref().on("child_added", function (childSnapshot) {
     // Calculate the months worked using hardcore math
     // To calculate the months worked
     var nextArrival = moment().diff(moment(theStart, "kk:mm"), "months");
-    console.log(nextArrival);
+    console.log("nextArrival " + nextArrival);
 
     // Calculate the total billed rate
     var minutesAway = theStart & theFrequency;
-    console.log(minutesAway);
+    console.log("minutesAway " + minutesAway);
 
     // Create the new row
     var newRow = $("<tr>").append(
