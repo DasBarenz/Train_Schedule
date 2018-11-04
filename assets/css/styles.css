@@ -2,10 +2,11 @@
 font-family: 'PT Sans Narrow', sans-serif; */
 
 .jumbotron {
-  background-color: #9d7a36 !important;
+  /* background-color: #9d7a36 !important; */
+  background-color:rgba(157,122,54, 0.8) !important;
   padding: 2rem 2rem;
   font-family: 'PT Sans Narrow', sans-serif;
-  opacity: .8;
+  /* opacity: .8; */
 }
 
 h1 {
