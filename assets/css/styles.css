@@ -1,5 +1,38 @@
-#employee-table th,
+/* font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif; */
+
+#train-table th,
 td {
   display: inline-block;
   width: 20%;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.jumbotron {
+  background-color: #9d7a36 !important;
+  padding: 2rem 2rem;
+  font-family: 'PT Sans Narrow', sans-serif;
+  opacity: .8;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+}
+
+#train-table {
+  font-size: 20px;
+}
+
+.card-header {
+  font-size: 22px;
+  /* margin: auto; */
+  background-color:#9d7a36;
+  font-weight: 600;
+}
+
+body {
+  background-image: url("../images/pianoMic.jpg");
+  background-size: cover;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
