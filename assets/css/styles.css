@@ -1,13 +1,6 @@
 /* font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'PT Sans Narrow', sans-serif; */
 
-#train-table th,
-td {
-  display: inline-block;
-  width: 20%;
-  font-family: 'PT Sans Narrow', sans-serif;
-}
-
 .jumbotron {
   background-color: #9d7a36 !important;
   padding: 2rem 2rem;
@@ -18,16 +11,13 @@ td {
 h1 {
   font-weight: 800;
   font-size: 3.5rem;
-}
-
-#train-table {
-  font-size: 20px;
+  opacity: 1;
 }
 
 .card-header {
   font-size: 22px;
   /* margin: auto; */
-  background-color:#9d7a36;
+  background-color:#d7c9ae;
   font-weight: 600;
 }
 
@@ -35,4 +25,34 @@ body {
   background-image: url("../images/pianoMic.jpg");
   background-size: cover;
   font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#train-table th,
+td {
+  display: inline-block;
+  width: 20%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}
+
+#trainInput {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+}
+
+label {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  }
+
+#timeInput {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  }
+
+#trainSubmit {
+  background-color: #8d4f5e;
+  border-style: none;
+  font-size: 24px;
+  margin: 2px;
 }
